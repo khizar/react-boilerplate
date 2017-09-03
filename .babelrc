@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "react",
+    ["env",
+      {
+        "es2015": {
+          "modules": false
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "react"],
+      "plugins": ["transform-es2015-modules-commonjs"],
+    }
+  }
+}

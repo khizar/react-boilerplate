@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "comma-dangle": [
+      "warn",
+      "always"
+    ],
+    "quotes": ["warn", "single"],
+    "jsx-quotes":["warn", "prefer-single"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "prettier/prettier": ["warn", { "singleQuote": true, "tabWidth": 4, "trailingComma": "all" }]
+  },
+  "root": true,
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "prettier"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint"
+  },
+  "globals": {
+    "window": true,
+    "location": true,
+    "document": true,
+    "localStorage": true,
+    "sessionStorage": true,
+    "fetch": true
+  }
+}
