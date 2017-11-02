@@ -27,12 +27,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khizar/twitter-reading-list.git"
+    "url": "git+https://github.com:khizar/react-boilerplate.git"
   },
   "author": "khizar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khizar/twitter-reading-list/issues"
+    "url": "https://github.com/khizar/react-boilerplate/issues"
   },
   "dependencies": {
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
