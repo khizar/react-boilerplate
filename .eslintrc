@@ -1,27 +1,42 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "standard-with-typescript",
+    "airbnb-typescript",
+    "prettier",
+    "prettier/react",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
-    "func-names": [
-      "error",
-      "never"
-    ],
-    "comma-dangle": [
-      "warn",
-      "always-multiline"
-    ],
+    "func-names": ["error", "never"],
+    "comma-dangle": ["warn", "always-multiline"],
     "quotes": ["warn", "single"],
-    "jsx-quotes":["warn", "prefer-single"],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "prettier/prettier": ["warn", { "singleQuote": true, "trailingComma": "all" }]
+    "jsx-quotes": ["warn", "prefer-single"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      { "singleQuote": true, "trailingComma": "all" }
+    ]
   },
   "root": true,
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import",
-    "prettier"
-  ],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "@typescript-eslint"],
   "settings": {
     "import/parser": "babel-eslint"
   },

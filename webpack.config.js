@@ -1,4 +1,3 @@
-/* eslint-disable */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -13,9 +12,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ['ts-loader'],
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'source-map-loader',
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
@@ -51,11 +56,13 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.jsx', 'pcss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.jsx', 'pcss'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
   },
+  // addition - add source-map support
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
