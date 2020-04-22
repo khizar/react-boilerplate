@@ -1,7 +1,9 @@
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
 import CSSModules from 'react-css-modules';
+
 import styles from './App.pcss';
 
-const App = props => <div styleName="main">hellooo</div>;
+const App = () => <div styleName='main'>hellooo</div>;
 
-export default CSSModules(App, styles, { allowMultiple: true });
+export default hot(CSSModules(App, styles, { allowMultiple: true }));

@@ -8,12 +8,12 @@
     ],
     "comma-dangle": [
       "warn",
-      "always"
+      "always-multiline"
     ],
     "quotes": ["warn", "single"],
     "jsx-quotes":["warn", "prefer-single"],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "prettier/prettier": ["warn", { "singleQuote": true, "tabWidth": 4, "trailingComma": "all" }]
+    "prettier/prettier": ["warn", { "singleQuote": true, "trailingComma": "all" }]
   },
   "root": true,
   "plugins": [
