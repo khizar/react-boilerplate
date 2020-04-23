@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component is mounted should match snapshot 1`] = `
+<div>
+  <div
+    class="main"
+  >
+    <h1>
+      Hello from 
+      ts
+       and 
+      react
+      !
+    </h1>
+  </div>
+</div>
+`;

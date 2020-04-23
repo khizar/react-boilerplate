@@ -12,18 +12,6 @@ const BEM_CONFIG = {
     }
 };
 
-const AUTOPREFIXER_CONFIG = {
-    browsers: [
-        'Android >= 4.1',
-        'Chrome >= 28',
-        'Firefox >= 38',
-        'Explorer >= 10',
-        'iOS >= 7',
-        'Opera >= 40',
-        'Edge >= 12',
-        'Safari >= 7'
-    ]
-};
 // eslint-disable-line global-require
 module.exports = {
     plugins: [
@@ -31,7 +19,7 @@ module.exports = {
         // https://github.com/postcss/postcss-import
         require('postcss-import'),
         require('postcss-url'),
-        require('postcss-bem')(BEM_CONFIG),
+        require('postcss-bem-fix')(BEM_CONFIG),
         require('precss'),
 
         // W3C variables, e.g. :root { --color: red; } div { background: var(--color); }
@@ -64,6 +52,6 @@ module.exports = {
         require('postcss-nested'),
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
-        require('autoprefixer')(AUTOPREFIXER_CONFIG)
+        require('autoprefixer')()
     ]
 };

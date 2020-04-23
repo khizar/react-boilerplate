@@ -1,22 +1,22 @@
 {
   "presets": [
-    "react",
-    ["env",
+    "@babel/preset-typescript",
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
       {
-        "es2015": {
-          "modules": false
-        }
+        "useBuiltIns": "usage"
       }
     ]
   ],
   "plugins": [
-    "transform-decorators-legacy",
-    "react-hot-loader/babel"
-  ],
-  "env": {
-    "test": {
-      "presets": [["env"], "react"],
-      "plugins": ["transform-es2015-modules-commonjs"],
-    }
-  }
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-export-default-from",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ]
 }
