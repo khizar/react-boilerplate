@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: ['react-hot-loader/patch', './app/index.jsx'],
+    app: ['react-hot-loader/patch', './app/index.tsx'],
   },
   output: {
     path: path.resolve(__dirname, 'public/'),
