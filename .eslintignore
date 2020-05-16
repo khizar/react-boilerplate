@@ -8,3 +8,6 @@ coverage
 public
 webpack
 webpack.config.js
+*.pcss
+*.snap
+

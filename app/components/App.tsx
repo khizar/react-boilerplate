@@ -6,9 +6,9 @@ import Hello from './TypedApp';
 import styles from './App.pcss';
 
 const App = () => (
-  <div styleName='main'>
+  <main styleName='main'>
     <Hello compiler='ts' framework='react' />
-  </div>
+  </main>
 );
 
 export default hot(CSSModules(App, styles, { allowMultiple: true }));

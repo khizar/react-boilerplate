@@ -6,7 +6,6 @@ export interface HelloProps {
 }
 
 const Hello = ({ compiler, framework }: HelloProps) => {
-  console.log(compiler);
   return (
     <h1>
       Hello from {compiler} and {framework}!
